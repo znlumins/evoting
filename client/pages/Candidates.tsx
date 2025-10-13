@@ -47,7 +47,7 @@ const Candidates = () => {
             {candidates.map((candidate) => (
               <article
                 key={candidate.number}
-                className="group relative flex flex-col items-center gap-6 rounded-4xl border border-white/15 bg-white/10 p-8 text-center backdrop-blur-2xl transition hover:border-primary/40 hover:bg-white/15"
+                className="group relative flex flex-col items-center gap-6 rounded-[2.5rem] border border-white/15 bg-white/10 p-8 text-center backdrop-blur-2xl transition hover:border-primary/40 hover:bg-white/15"
               >
                 <div className="relative h-40 w-40 overflow-hidden rounded-[2rem] border-4 border-white/30 shadow-glow">
                   <img
