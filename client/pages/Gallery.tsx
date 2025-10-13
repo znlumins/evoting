@@ -13,8 +13,8 @@ const Gallery = () => {
     <SiteLayout mainClassName="flex items-center">
       <section className="w-full px-6 py-24 sm:px-10">
         <div className="mx-auto w-full max-w-6xl space-y-10">
-          <div className="relative overflow-hidden rounded-4xl border border-white/15 bg-white/10 text-white shadow-glow backdrop-blur-2xl">
-            <div className="relative isolate flex min-h-[520px] flex-col justify-between gap-10 overflow-hidden rounded-4xl p-10">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 text-white shadow-glow backdrop-blur-2xl">
+            <div className="relative isolate flex min-h-[520px] flex-col justify-between gap-10 overflow-hidden rounded-[2.5rem] p-10">
               <img
                 src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=80"
                 alt="Regeneration Staff HMPSTI 2023–2024"
