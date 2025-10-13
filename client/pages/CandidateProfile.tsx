@@ -33,7 +33,7 @@ const CandidateProfile = () => {
     <SiteLayout>
       <section className="relative px-6 py-24 sm:px-10">
         <div className="mx-auto grid max-w-6xl gap-10 text-white lg:grid-cols-[280px_minmax(0,1fr)]">
-          <aside className="rounded-4xl border border-white/15 bg-white/10 p-6 backdrop-blur-2xl">
+          <aside className="rounded-[2.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-2xl">
             <h2 className="font-display text-xl text-white">Navigation</h2>
             <nav className="mt-6 space-y-2 text-sm font-medium text-white/70">
               {menuItems.map((item, index) => (
@@ -54,7 +54,7 @@ const CandidateProfile = () => {
           </aside>
 
           <div className="space-y-8">
-            <header className="overflow-hidden rounded-4xl border border-white/15 bg-white/10 p-8 backdrop-blur-2xl sm:p-10">
+            <header className="overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 p-8 backdrop-blur-2xl sm:p-10">
               <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex items-center gap-6">
                   <div className="h-28 w-28 overflow-hidden rounded-[2rem] border-4 border-white/30 shadow-glow">
@@ -82,7 +82,7 @@ const CandidateProfile = () => {
             </header>
 
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <article className="rounded-4xl border border-white/15 bg-white/10 p-8 backdrop-blur-2xl">
+              <article className="rounded-[2.5rem] border border-white/15 bg-white/10 p-8 backdrop-blur-2xl">
                 <h2 className="flex items-center gap-2 font-display text-2xl text-white">
                   <BookOpenCheck className="h-6 w-6 text-primary" />
                   Experience & Vision
@@ -107,7 +107,7 @@ const CandidateProfile = () => {
               </article>
 
               <aside className="space-y-6">
-                <div className="rounded-4xl border border-white/15 bg-white/10 p-6 backdrop-blur-2xl">
+                <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-2xl">
                   <h3 className="font-display text-xl text-white">Highlights</h3>
                   <ul className="mt-4 space-y-4 text-sm text-white/75">
                     {achievements.map((achievement) => (
@@ -118,7 +118,7 @@ const CandidateProfile = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="rounded-4xl border border-white/15 bg-white/10 p-6 text-sm text-white/75 backdrop-blur-2xl">
+                <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-6 text-sm text-white/75 backdrop-blur-2xl">
                   <div className="flex items-center gap-3">
                     <Compass className="h-5 w-5 text-primary" />
                     <p className="font-semibold text-white">Leadership Promise</p>
