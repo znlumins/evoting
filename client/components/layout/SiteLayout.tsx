@@ -37,7 +37,11 @@ const SiteLayout = ({
 
       <header className="relative z-30 px-4 py-6 sm:px-8">
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-white/10 px-6 py-4 backdrop-blur-xl">
-          <NavLink to="/" className="flex shrink-0 items-center gap-3" aria-label="HMPSTI Universitas Brawijaya">
+          <NavLink
+            to="/"
+            className="flex shrink-0 items-center gap-3"
+            aria-label="HMPSTI Universitas Brawijaya"
+          >
             <img
               src="https://i.ibb.co.com/93f5Byrn/Group-673.png"
               alt="HMPSTI Universitas Brawijaya logo"
@@ -74,7 +78,11 @@ const SiteLayout = ({
               onClick={() => setIsOpen((prev) => !prev)}
               aria-label="Toggle navigation"
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
@@ -106,12 +114,18 @@ const SiteLayout = ({
         ) : null}
       </header>
 
-      <main className={cn("relative z-20 flex-1", mainClassName)}>{children}</main>
+      <main className={cn("relative z-20 flex-1", mainClassName)}>
+        {children}
+      </main>
 
       <footer className="relative z-20 px-4 pb-10 pt-6 sm:px-8">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-sm text-white/70 backdrop-blur-xl sm:flex-row">
-          <p className="font-medium tracking-wide">© {new Date().getFullYear()} HMPSTI Universitas Brawijaya.</p>
-          <p className="uppercase tracking-[0.25em]">Your Voice, Your Choice.</p>
+          <p className="font-medium tracking-wide">
+            © {new Date().getFullYear()} HMPSTI Universitas Brawijaya.
+          </p>
+          <p className="uppercase tracking-[0.25em]">
+            Your Voice, Your Choice.
+          </p>
         </div>
       </footer>
     </div>

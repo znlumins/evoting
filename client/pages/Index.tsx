@@ -63,14 +63,18 @@ export default function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div className="relative z-10 space-y-10">
             <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70 backdrop-blur-xl">
-              <Sparkles className="h-4 w-4 text-primary" /> Your Voice · Your Choice
+              <Sparkles className="h-4 w-4 text-primary" /> Your Voice · Your
+              Choice
             </span>
             <div className="space-y-6">
               <h1 className="font-display text-4xl leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Your Voice, Your Vote: Shaping Tomorrow Together
               </h1>
               <p className="max-w-xl text-lg text-white/80">
-                Short description about the democratic voting spirit for HMPSTI members. Empower every decision with a secure, inspiring, and inclusive e-voting experience tailor-made for HMPSTI Universitas Brawijaya.
+                Short description about the democratic voting spirit for HMPSTI
+                members. Empower every decision with a secure, inspiring, and
+                inclusive e-voting experience tailor-made for HMPSTI Universitas
+                Brawijaya.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4">
@@ -94,8 +98,12 @@ export default function Index() {
                   key={metric.label}
                   className="rounded-2xl border border-white/10 bg-white/10 p-4 text-center backdrop-blur-xl"
                 >
-                  <p className="text-2xl font-semibold text-white">{metric.value}</p>
-                  <p className="mt-1 uppercase tracking-[0.3em] text-[0.65rem]">{metric.label}</p>
+                  <p className="text-2xl font-semibold text-white">
+                    {metric.value}
+                  </p>
+                  <p className="mt-1 uppercase tracking-[0.3em] text-[0.65rem]">
+                    {metric.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -116,7 +124,10 @@ export default function Index() {
                 Designed for a Seamless HMPSTI Election Journey
               </h2>
               <p className="text-base text-white/75">
-                We built the HMPSTI e-voting experience to mirror the energy of student leadership—secure, transparent, and community driven. Every screen, notification, and insight is crafted to celebrate participation.
+                We built the HMPSTI e-voting experience to mirror the energy of
+                student leadership—secure, transparent, and community driven.
+                Every screen, notification, and insight is crafted to celebrate
+                participation.
               </p>
             </div>
             <div className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-xs uppercase tracking-[0.42em] text-white/70 backdrop-blur-xl">
@@ -130,11 +141,16 @@ export default function Index() {
                 key={item.title}
                 className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
               >
-                <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100" aria-hidden>
+                <div
+                  className="absolute inset-0 opacity-0 transition group-hover:opacity-100"
+                  aria-hidden
+                >
                   <div className="absolute -right-10 top-10 h-32 w-32 rounded-full bg-amber-200/20 blur-3xl" />
                 </div>
                 <item.icon className="h-9 w-9 text-primary" />
-                <h3 className="mt-6 font-display text-2xl text-white">{item.title}</h3>
+                <h3 className="mt-6 font-display text-2xl text-white">
+                  {item.title}
+                </h3>
                 <p className="mt-4 text-sm text-white/75">{item.description}</p>
                 <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
                   Explore
@@ -154,7 +170,10 @@ export default function Index() {
                 A Three-Phase Path to a Powerful Mandate
               </h2>
               <p className="text-base text-white/75">
-                From nominations to celebrations, we guide HMPSTI members through a transparent and inspiring election process. Every phase is built with interactive storytelling, vibrant visuals, and secure verification.
+                From nominations to celebrations, we guide HMPSTI members
+                through a transparent and inspiring election process. Every
+                phase is built with interactive storytelling, vibrant visuals,
+                and secure verification.
               </p>
               <NavLink
                 to="/general-election"
@@ -174,7 +193,9 @@ export default function Index() {
                     {index + 1}
                   </div>
                   <div>
-                    <h3 className="font-display text-xl text-white">{step.title}</h3>
+                    <h3 className="font-display text-xl text-white">
+                      {step.title}
+                    </h3>
                     <p className="mt-2 text-sm text-white/70">{step.detail}</p>
                   </div>
                 </div>
@@ -193,14 +214,18 @@ export default function Index() {
                   Meet the Candidates and Cast an Informed Vote
                 </h3>
                 <p className="text-base text-white/75">
-                  Dive into candidate visions, achievements, and leadership styles. Compare profiles, explore campaign promises, and get ready to make the choice that shapes HMPSTI’s future.
+                  Dive into candidate visions, achievements, and leadership
+                  styles. Compare profiles, explore campaign promises, and get
+                  ready to make the choice that shapes HMPSTI’s future.
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm text-white/75">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2">
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> Verified Profiles
+                    <CheckCircle2 className="h-4 w-4 text-primary" /> Verified
+                    Profiles
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2">
-                    <Users className="h-4 w-4 text-primary" /> Community Insights
+                    <Users className="h-4 w-4 text-primary" /> Community
+                    Insights
                   </div>
                 </div>
               </div>

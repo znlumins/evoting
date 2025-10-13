@@ -17,7 +17,8 @@ type PhoneConfig = {
 const PHONES: PhoneConfig[] = [
   {
     id: "activity",
-    background: "linear-gradient(160deg, rgba(255,255,255,0.12) 0%, rgba(26,59,179,0.55) 100%)",
+    background:
+      "linear-gradient(160deg, rgba(255,255,255,0.12) 0%, rgba(26,59,179,0.55) 100%)",
     title: "Live Participation",
     subtitle: "482 votes today",
     metric: "+12.4%",
@@ -26,7 +27,8 @@ const PHONES: PhoneConfig[] = [
   },
   {
     id: "security",
-    background: "linear-gradient(210deg, rgba(251,191,36,0.35) 0%, rgba(15,29,83,0.9) 100%)",
+    background:
+      "linear-gradient(210deg, rgba(251,191,36,0.35) 0%, rgba(15,29,83,0.9) 100%)",
     title: "Secure Access",
     subtitle: "Biometric ready",
     metric: "Shielded",
@@ -35,7 +37,8 @@ const PHONES: PhoneConfig[] = [
   },
   {
     id: "results",
-    background: "linear-gradient(210deg, rgba(255,255,255,0.18) 0%, rgba(37,83,231,0.65) 100%)",
+    background:
+      "linear-gradient(210deg, rgba(255,255,255,0.18) 0%, rgba(37,83,231,0.65) 100%)",
     title: "Results Dashboard",
     subtitle: "Instant insights",
     metric: "Real-time",
@@ -74,8 +77,12 @@ const PhoneShowcase = ({ className }: PhoneShowcaseProps) => {
 
               <div className="mt-8 space-y-5 px-5 text-white">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.35em] text-white/60">{phone.metric}</p>
-                  <p className="mt-1 text-xl font-semibold leading-tight">{phone.title}</p>
+                  <p className="text-sm uppercase tracking-[0.35em] text-white/60">
+                    {phone.metric}
+                  </p>
+                  <p className="mt-1 text-xl font-semibold leading-tight">
+                    {phone.title}
+                  </p>
                   <p className="text-sm text-white/60">{phone.subtitle}</p>
                 </div>
 

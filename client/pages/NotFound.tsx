@@ -12,7 +12,9 @@ const NotFound = () => {
         </span>
         <h1 className="font-display text-4xl">Page Not Found</h1>
         <p className="text-sm text-white/75">
-          The page you are looking for doesn’t exist or might be in development. Navigate back to the homepage to continue exploring the HMPSTI e-voting experience.
+          The page you are looking for doesn’t exist or might be in development.
+          Navigate back to the homepage to continue exploring the HMPSTI
+          e-voting experience.
         </p>
         <NavLink
           to="/"

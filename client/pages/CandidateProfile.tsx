@@ -1,4 +1,10 @@
-import { ArrowRight, Award, BookOpenCheck, Compass, HelpCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  BookOpenCheck,
+  Compass,
+  HelpCircle,
+} from "lucide-react";
 
 import SiteLayout from "@/components/layout/SiteLayout";
 
@@ -47,7 +53,11 @@ const CandidateProfile = () => {
                   }
                 >
                   <span>{item}</span>
-                  {index === 0 ? <ArrowRight className="h-4 w-4" /> : <HelpCircle className="h-4 w-4 text-white/40" />}
+                  {index === 0 ? (
+                    <ArrowRight className="h-4 w-4" />
+                  ) : (
+                    <HelpCircle className="h-4 w-4 text-white/40" />
+                  )}
                 </a>
               ))}
             </nav>
@@ -68,14 +78,17 @@ const CandidateProfile = () => {
                     <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
                       Candidate Profile
                     </span>
-                    <h1 className="font-display text-3xl text-white sm:text-4xl">Nadia Khairunnisa Putri</h1>
+                    <h1 className="font-display text-3xl text-white sm:text-4xl">
+                      Nadia Khairunnisa Putri
+                    </h1>
                     <p className="text-sm text-white/75">Region: Malang Raya</p>
                   </div>
                 </div>
                 <div className="rounded-3xl border border-primary/40 bg-primary/20 px-6 py-5 text-sm text-white/80">
                   <p className="font-semibold text-white">Motto</p>
                   <p className="mt-1 text-base text-white/85">
-                    “Empowering every member’s perspective to build a compassionate, data-informed HMPSTI.”
+                    “Empowering every member’s perspective to build a
+                    compassionate, data-informed HMPSTI.”
                   </p>
                 </div>
               </div>
@@ -88,31 +101,47 @@ const CandidateProfile = () => {
                   Experience & Vision
                 </h2>
                 <p className="mt-4 text-sm text-white/75">
-                  Nadia focuses on digital transformation, collaborative policymaking, and transparent performance tracking. Her experience blends grassroots mentoring with strategic planning for cross-department projects.
+                  Nadia focuses on digital transformation, collaborative
+                  policymaking, and transparent performance tracking. Her
+                  experience blends grassroots mentoring with strategic planning
+                  for cross-department projects.
                 </p>
                 <ul className="mt-6 space-y-4 text-sm text-white/80">
                   <li className="flex items-start gap-3">
                     <Award className="mt-1 h-5 w-5 text-primary" />
-                    <span>Proposed the “Insight Hub” platform to centralize member feedback and publish monthly progress scores.</span>
+                    <span>
+                      Proposed the “Insight Hub” platform to centralize member
+                      feedback and publish monthly progress scores.
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Award className="mt-1 h-5 w-5 text-primary" />
-                    <span>Initiated hybrid mentorship programs that connect alumni expertise with current HMPSTI projects.</span>
+                    <span>
+                      Initiated hybrid mentorship programs that connect alumni
+                      expertise with current HMPSTI projects.
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Award className="mt-1 h-5 w-5 text-primary" />
-                    <span>Advocates for transparent funding dashboards highlighting resource allocation and impact metrics.</span>
+                    <span>
+                      Advocates for transparent funding dashboards highlighting
+                      resource allocation and impact metrics.
+                    </span>
                   </li>
                 </ul>
               </article>
 
               <aside className="space-y-6">
                 <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-2xl">
-                  <h3 className="font-display text-xl text-white">Highlights</h3>
+                  <h3 className="font-display text-xl text-white">
+                    Highlights
+                  </h3>
                   <ul className="mt-4 space-y-4 text-sm text-white/75">
                     {achievements.map((achievement) => (
                       <li key={achievement.title}>
-                        <p className="font-semibold text-white">{achievement.title}</p>
+                        <p className="font-semibold text-white">
+                          {achievement.title}
+                        </p>
                         <p className="text-white/70">{achievement.detail}</p>
                       </li>
                     ))}
@@ -121,10 +150,14 @@ const CandidateProfile = () => {
                 <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-6 text-sm text-white/75 backdrop-blur-2xl">
                   <div className="flex items-center gap-3">
                     <Compass className="h-5 w-5 text-primary" />
-                    <p className="font-semibold text-white">Leadership Promise</p>
+                    <p className="font-semibold text-white">
+                      Leadership Promise
+                    </p>
                   </div>
                   <p className="mt-3">
-                    Nadia pledges to build cross-division task forces, elevate academic innovation, and ensure every voice remains central to HMPSTI’s mission.
+                    Nadia pledges to build cross-division task forces, elevate
+                    academic innovation, and ensure every voice remains central
+                    to HMPSTI’s mission.
                   </p>
                 </div>
               </aside>

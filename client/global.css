@@ -123,7 +123,12 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(60% 60% at 80% 10%, rgba(251, 191, 36, 0.18), transparent),
+    background:
+      radial-gradient(
+        60% 60% at 80% 10%,
+        rgba(251, 191, 36, 0.18),
+        transparent
+      ),
       radial-gradient(45% 45% at 10% 85%, rgba(38, 102, 255, 0.25), transparent);
     opacity: 0.9;
     z-index: 0;

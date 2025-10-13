@@ -18,9 +18,13 @@ const Login = () => {
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70 backdrop-blur-xl">
               Ready to Vote
             </span>
-            <h1 className="font-display text-4xl text-white sm:text-5xl">Welcome</h1>
+            <h1 className="font-display text-4xl text-white sm:text-5xl">
+              Welcome
+            </h1>
             <p className="max-w-xl text-base text-white/80">
-              Sign in with your HMPSTI credentials to participate in the 2024–2025 General Election. Your secure dashboard keeps you updated on timelines, candidate highlights, and voting milestones.
+              Sign in with your HMPSTI credentials to participate in the
+              2024–2025 General Election. Your secure dashboard keeps you
+              updated on timelines, candidate highlights, and voting milestones.
             </p>
           </div>
 
@@ -39,13 +43,20 @@ const Login = () => {
 
         <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-8 backdrop-blur-2xl sm:p-10">
           <div className="space-y-1 text-center">
-            <h2 className="font-display text-2xl text-white">Secure Access Portal</h2>
-            <p className="text-sm text-white/70">Use your registered information to continue.</p>
+            <h2 className="font-display text-2xl text-white">
+              Secure Access Portal
+            </h2>
+            <p className="text-sm text-white/70">
+              Use your registered information to continue.
+            </p>
           </div>
 
           <form className="mt-8 space-y-6" aria-label="Login form">
             <div className="space-y-2">
-              <label htmlFor="nim" className="text-sm font-medium text-white/90">
+              <label
+                htmlFor="nim"
+                className="text-sm font-medium text-white/90"
+              >
                 ID / NIM
               </label>
               <div className="relative">
@@ -62,7 +73,10 @@ const Login = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="text-sm font-medium text-white/90">
+              <label
+                htmlFor="password"
+                className="text-sm font-medium text-white/90"
+              >
                 Password
               </label>
               <div className="relative">
@@ -105,12 +119,18 @@ const Login = () => {
             </div>
 
             <div className="flex flex-col gap-2 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between">
-              <Link to="#" className="underline-offset-4 transition hover:text-white hover:underline">
+              <Link
+                to="#"
+                className="underline-offset-4 transition hover:text-white hover:underline"
+              >
                 Forgot password?
               </Link>
               <span>
                 New to the platform?{" "}
-                <Link to="#" className="font-semibold text-primary underline-offset-4 transition hover:text-amber-300 hover:underline">
+                <Link
+                  to="#"
+                  className="font-semibold text-primary underline-offset-4 transition hover:text-amber-300 hover:underline"
+                >
                   Sign up
                 </Link>
               </span>

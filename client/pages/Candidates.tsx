@@ -39,7 +39,9 @@ const Candidates = () => {
               HMPSTI’s Chief Candidates 2024–2025
             </h1>
             <p className="mx-auto max-w-3xl text-base text-white/80">
-              Get to know the leadership styles and commitments of this year’s candidates. Each profile reflects their dedication to student innovation, academic excellence, and community inclusivity.
+              Get to know the leadership styles and commitments of this year’s
+              candidates. Each profile reflects their dedication to student
+              innovation, academic excellence, and community inclusivity.
             </p>
           </div>
 
@@ -60,7 +62,9 @@ const Candidates = () => {
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
                     No. {candidate.number}
                   </span>
-                  <h2 className="font-display text-2xl text-white">{candidate.name}</h2>
+                  <h2 className="font-display text-2xl text-white">
+                    {candidate.name}
+                  </h2>
                   <p className="text-sm text-white/70">{candidate.focus}</p>
                 </div>
                 <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs text-white/60">

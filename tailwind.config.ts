@@ -73,7 +73,8 @@ export default {
       },
       backgroundImage: {
         "brand-gradient": "linear-gradient(135deg, #0f1d53 0%, #1a3bb3 100%)",
-        "brand-radial": "radial-gradient(circle at top right, rgba(251, 191, 36, 0.25), transparent 55%)",
+        "brand-radial":
+          "radial-gradient(circle at top right, rgba(251, 191, 36, 0.25), transparent 55%)",
       },
       boxShadow: {
         glow: "0 24px 54px -18px rgba(26, 59, 179, 0.65)",

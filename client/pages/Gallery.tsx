@@ -31,7 +31,10 @@ const Gallery = () => {
                     Gallery: Regeneration Staff HMPSTI 2023–2024
                   </h1>
                   <p className="max-w-2xl text-base text-white/80">
-                    Relive the milestones of our regeneration program. From collaboration labs to leadership workshops, this gallery captures the dedication and camaraderie that fuel HMPSTI Universitas Brawijaya.
+                    Relive the milestones of our regeneration program. From
+                    collaboration labs to leadership workshops, this gallery
+                    captures the dedication and camaraderie that fuel HMPSTI
+                    Universitas Brawijaya.
                   </p>
                 </div>
               </div>
