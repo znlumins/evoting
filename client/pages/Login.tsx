@@ -37,7 +37,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="rounded-4xl border border-white/15 bg-white/10 p-8 backdrop-blur-2xl sm:p-10">
+        <div className="rounded-[2.5rem] border border-white/15 bg-white/10 p-8 backdrop-blur-2xl sm:p-10">
           <div className="space-y-1 text-center">
             <h2 className="font-display text-2xl text-white">Secure Access Portal</h2>
             <p className="text-sm text-white/70">Use your registered information to continue.</p>
