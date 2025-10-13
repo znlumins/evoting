@@ -6,7 +6,7 @@ import SiteLayout from "@/components/layout/SiteLayout";
 const NotFound = () => {
   return (
     <SiteLayout mainClassName="flex items-center justify-center">
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-6 rounded-4xl border border-white/15 bg-white/10 px-8 py-16 text-center text-white backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-xl flex-col items-center gap-6 rounded-[2.5rem] border border-white/15 bg-white/10 px-8 py-16 text-center text-white backdrop-blur-2xl">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
           <Compass className="h-4 w-4 text-primary" /> 404
         </span>
