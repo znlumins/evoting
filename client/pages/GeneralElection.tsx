@@ -34,7 +34,7 @@ const GeneralElection = () => {
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-4xl gap-6 rounded-4xl border border-white/15 bg-white/10 p-10 text-left backdrop-blur-2xl sm:grid-cols-[1.2fr_0.8fr]">
+          <div className="mx-auto grid max-w-4xl gap-6 rounded-[2.5rem] border border-white/15 bg-white/10 p-10 text-left backdrop-blur-2xl sm:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-6">
               <h2 className="font-display text-2xl text-white">Why Your Vote Matters</h2>
               <p className="text-sm text-white/75">
