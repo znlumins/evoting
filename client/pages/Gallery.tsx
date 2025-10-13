@@ -11,7 +11,7 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <SiteLayout mainClassName="flex items-center">
-      <section className="w-full px-6 py-24 sm:px-10">
+      <section className="w-full px-6 py-11 sm:px-10">
         <div className="mx-auto w-full max-w-6xl space-y-10">
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 text-white shadow-glow backdrop-blur-2xl">
             <div className="relative isolate flex min-h-[520px] flex-col justify-between gap-10 overflow-hidden rounded-[2.5rem] p-10">
@@ -28,7 +28,7 @@ const Gallery = () => {
                 </span>
                 <div className="space-y-4">
                   <h1 className="font-display text-4xl leading-tight sm:text-5xl">
-                    Gallery: Regeneration Staff HMPSTI 2023–2024
+                    Gallery: Regeneration Staff HMPSTI 2024–2025
                   </h1>
                   <p className="max-w-2xl text-base text-white/80">
                     Relive the milestones of our regeneration program. From

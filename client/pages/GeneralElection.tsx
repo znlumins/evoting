@@ -20,7 +20,7 @@ const milestones = [
 const GeneralElection = () => {
   return (
     <SiteLayout>
-      <section className="relative px-6 py-24 sm:px-10">
+      <section className="relative px-6 py-12 sm:px-10">
         <div className="mx-auto max-w-5xl space-y-14 text-white">
           <div className="space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
@@ -50,13 +50,13 @@ const GeneralElection = () => {
                 achievements of HMPSTI.
               </p>
               <ul className="space-y-4 text-sm text-white/75">
-                <li className="flex items-start gap-3">
+                {/* <li className="flex items-start gap-3">
                   <CalendarCheck2 className="mt-1 h-5 w-5 text-primary" />
                   <span>
                     Interactive agenda reminders that keep you aligned with
                     every milestone.
                   </span>
-                </li>
+                </li> */}
                 <li className="flex items-start gap-3">
                   <CalendarCheck2 className="mt-1 h-5 w-5 text-primary" />
                   <span>
@@ -83,10 +83,14 @@ const GeneralElection = () => {
                   {milestones.map((milestone) => (
                     <li
                       key={milestone.label}
-                      className="flex items-center justify-between"
+                      // --- INI ADALAH SATU-SATUNYA PERUBAHAN UTAMA ---
+                      // Menggunakan Grid untuk alignment yang rapi
+                      className="grid grid-cols-[1fr_auto] items-center gap-x-4"
                     >
                       <span>{milestone.label}</span>
-                      <span className="text-white">{milestone.detail}</span>
+                      <span className="text-right font-semibold text-white">
+                        {milestone.detail}
+                      </span>
                     </li>
                   ))}
                 </ul>

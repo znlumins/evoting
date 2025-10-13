@@ -1,40 +1,68 @@
-import { Camera, Star } from "lucide-react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { ArrowRight, Camera, Star } from "lucide-react";
 
 import SiteLayout from "@/components/layout/SiteLayout";
 
 const candidates = [
   {
     number: "01",
-    name: "Alya Putri Santoso",
+    name: "Raja Shaka Q.",
     focus: "Digital Empowerment",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=640&q=80",
   },
   {
     number: "02",
-    name: "Rafi Darmawan",
+    name: "Daniel T.S",
     focus: "Collaborative Growth",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=640&q=80",
   },
   {
     number: "03",
-    name: "Siti Nur Mardia",
+    name: "Alisya Aprilia A.F",
     focus: "Innovation & Inclusion",
     image:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=640&q=80",
+      "https.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=640&q=80",
   },
 ];
 
 const Candidates = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   return (
     <SiteLayout>
-      <section className="relative px-6 py-24 sm:px-10">
+      {/* POP-UP MODAL PENDAFTARAN */}
+      {isModalOpen && (
+        // DIUBAH: Kelas `backdrop-blur-sm` diubah menjadi `backdrop-blur-lg`
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-lg">
+          <div className="mx-4 max-w-md rounded-[2.5rem] border border-primary/30 bg-gray-900/80 p-10 text-center shadow-2xl shadow-primary/20">
+            <div className="space-y-6">
+              <h2 className="font-display text-3xl text-white">
+                Candidate Registration is Now Open!
+              </h2>
+              <p className="text-white/75">
+                The official list of candidates will be revealed here soon. Be
+                the next leader of HMPSTI—this is your chance to inspire and
+                innovate!
+              </p>
+              <NavLink
+                to="/register" // GANTI DENGAN LINK PENDAFTARAN YANG BENAR
+                className="group mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-primary via-amber-300 to-primary px-8 py-3 font-semibold text-brand-accent-foreground shadow-glow transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-400/40"
+              >
+                Become a Candidate
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* KONTEN HALAMAN UTAMA */}
+      <section className="relative px-6 py-10 sm:px-10">
         <div className="mx-auto max-w-6xl space-y-12 text-white">
           <div className="space-y-4 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-              <Camera className="h-4 w-4 text-primary" /> Candidate Spotlight
-            </span>
             <h1 className="font-display text-4xl leading-tight sm:text-5xl">
               HMPSTI’s Chief Candidates 2024–2025
             </h1>
