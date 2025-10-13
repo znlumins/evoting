@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,6 +58,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          "primary-soft": "hsl(var(--brand-primary-soft))",
+          accent: "hsl(var(--brand-accent))",
+          "accent-foreground": "hsl(var(--brand-accent-foreground))",
+          surface: "hsl(var(--brand-surface))",
+          outline: "hsl(var(--brand-outline))",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        display: ["Poppins", ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #0f1d53 0%, #1a3bb3 100%)",
+        "brand-radial": "radial-gradient(circle at top right, rgba(251, 191, 36, 0.25), transparent 55%)",
+      },
+      boxShadow: {
+        glow: "0 24px 54px -18px rgba(26, 59, 179, 0.65)",
+        "inner-glow": "inset 0 0 0 1px rgba(255, 255, 255, 0.08)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +101,19 @@ export default {
             height: "0",
           },
         },
+        pulseGlow: {
+          "0%, 100%": {
+            opacity: "0.35",
+          },
+          "50%": {
+            opacity: "0.7",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulseGlow 6s ease-in-out infinite",
       },
     },
   },
