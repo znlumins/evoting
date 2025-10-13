@@ -147,7 +147,7 @@ export default function Index() {
       </section>
 
       <section className="relative z-10 px-6 pb-24 sm:px-10">
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-8 backdrop-blur-2xl sm:p-12">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl sm:p-12">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="space-y-8">
               <h2 className="font-display text-3xl text-white sm:text-4xl">
@@ -186,7 +186,7 @@ export default function Index() {
 
       <section className="relative z-10 px-6 pb-28 sm:px-10">
         <div className="mx-auto max-w-6xl">
-          <div className="rounded-4xl border border-primary/30 bg-gradient-to-br from-white/15 via-white/10 to-white/5 p-10 backdrop-blur-2xl sm:p-14">
+          <div className="rounded-[2.5rem] border border-primary/30 bg-gradient-to-br from-white/15 via-white/10 to-white/5 p-10 backdrop-blur-2xl sm:p-14">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-2xl space-y-4">
                 <h3 className="font-display text-3xl text-white sm:text-4xl">
