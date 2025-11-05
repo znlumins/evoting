@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  nim          String   @unique
+  nama_lengkap String
+  token        String
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now()) // Baik untuk ditambahkan
+
+  // Relasi: Menandakan bahwa seorang User bisa memiliki satu record Vote.
+  vote         Vote?
+
+  @@map("users")
+}
+
+model Candidate {
+  id        Int     @id @default(autoincrement())
+  name      String
+  vision    String  @db.Text
+  mission   String  @db.Text
+  photoUrl  String  @db.Text
+  
+  // Relasi: Menandakan bahwa seorang Candidate bisa memiliki banyak record Vote.
+  votes     Vote[]
+
+  @@map("candidates")
+}
+
+// --- TAMBAHKAN MODEL VOTE INI ---
+// Model ini sangat penting untuk mencatat setiap suara
+model Vote {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  
+  // Hubungan ke User: Siapa yang memilih
+  userId      Int      @unique // @unique memastikan satu user hanya bisa vote sekali
+  user        User     @relation(fields: [userId], references: [id])
+  
+  // Hubungan ke Candidate: Siapa yang dipilih
+  candidateId Int
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+
+  @@map("votes")
+}

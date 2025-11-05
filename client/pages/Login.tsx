@@ -1,7 +1,77 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, LogIn } from "lucide-react";
 
-const Login = () => {
+const Login: React.FC = () => {
+  const [nim, setNim] = useState<string>("");
+  const [token, setToken] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const navigate = useNavigate();
+
+  // "Penjaga Pintu": Memeriksa user yang sudah login dan mengarahkannya
+  useEffect(() => {
+    const loggedInUserString = localStorage.getItem('loggedInUser');
+    if (loggedInUserString) {
+      try {
+        const userData = JSON.parse(loggedInUserString);
+        
+        // --- PERBAIKAN DI SINI ---
+        // Mengarahkan berdasarkan peran (role) yang tersimpan
+        if (userData && userData.role === 'ADMIN') {
+          navigate("/admin/dashboard");
+        } else {
+          navigate("/evoting"); // User biasa diarahkan ke halaman voting
+        }
+      } catch (e) {
+        // Jika data di localStorage korup, hapus saja
+        localStorage.removeItem('loggedInUser');
+      }
+    }
+  }, [navigate]);
+
+  // Fungsi untuk mengirim data login ke server
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:3001/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nim, token }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Login gagal! Periksa kembali NIM dan Token Anda.");
+      }
+
+      if (!data.user) {
+        throw new Error("Respons dari server tidak valid.");
+      }
+      
+      localStorage.setItem('loggedInUser', JSON.stringify(data.user));
+
+      // --- PERBAIKAN UTAMA DI SINI ---
+      // Logika pengarahan baru berdasarkan properti 'role'
+      if (data.user.role === 'ADMIN') {
+        alert("Login sebagai Admin berhasil!");
+        navigate("/admin/dashboard");
+      } else {
+        alert("Login berhasil!");
+        navigate("/evoting");
+      }
+
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Terjadi kesalahan yang tidak diketahui.");
+      }
+    }
+  };
+
   return (
     <main className="relative flex min-h-screen items-center justify-center p-6">
       <Link
@@ -22,7 +92,7 @@ const Login = () => {
           </p>
         </div>
 
-        <form className="mt-8 space-y-6" aria-label="Login form">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6" aria-label="Login form">
           <div className="space-y-2">
             <label htmlFor="nim" className="text-sm font-medium text-white/90">
               ID / NIM
@@ -30,35 +100,34 @@ const Login = () => {
             <div className="relative">
               <input
                 id="nim"
-                name="nim"
                 type="text"
-                inputMode="numeric"
                 placeholder="Enter your student ID"
                 className="h-12 w-full rounded-2xl border border-white/15 bg-white/10 px-4 text-base text-white placeholder:text-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/60"
-                autoComplete="on"
+                value={nim}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNim(e.target.value)}
+                required
               />
             </div>
           </div>
 
-          {/* --- PERUBAHAN DI SINI --- */}
           <div className="space-y-2">
-            <label
-              htmlFor="token" // Diubah dari "password"
-              className="text-sm font-medium text-white/90"
-            >
+            <label htmlFor="token" className="text-sm font-medium text-white/90">
               Token
             </label>
             <div className="relative">
               <input
-                id="token" // Diubah dari "password"
-                name="token" // Diubah dari "password"
-                type="password" // type="password" agar token tidak terlihat saat diketik
+                id="token"
+                type="password"
                 placeholder="Enter your unique token"
                 className="h-12 w-full rounded-2xl border border-white/15 bg-white/10 px-4 text-base text-white placeholder:text-white/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/60"
-                autoComplete="off" // Diubah agar token tidak di-save browser
+                value={token}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setToken(e.target.value)}
+                required
               />
             </div>
           </div>
+          
+          {error && <p className="text-center text-sm text-red-400">{error}</p>}
 
           <button
             type="submit"
@@ -67,9 +136,6 @@ const Login = () => {
             <LogIn className="h-5 w-5" />
             Login
           </button>
-
-          {/* --- BAGIAN INI DIHAPUS --- */}
-          {/* <div className="flex ..."> ... </div> */}
         </form>
       </div>
     </main>

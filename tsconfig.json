@@ -28,8 +28,10 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./client/*"],
-      "@shared/*": ["./shared/*"]
+      // --- PERBAIKAN DI SINI: Hapus './' ---
+      "@/*": ["client/*"],
+      "@shared/*": ["shared/*"]
+      // ------------------------------------
     }
   },
   "include": [

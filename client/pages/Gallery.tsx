@@ -11,7 +11,7 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <SiteLayout mainClassName="flex items-center">
-      <section className="w-full px-6 py-11 sm:px-10">
+      <section className="w-full px-6 py-0 sm:px-10">
         <div className="mx-auto w-full max-w-6xl space-y-10">
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 text-white shadow-glow backdrop-blur-2xl">
             <div className="relative isolate flex min-h-[520px] flex-col justify-between gap-10 overflow-hidden rounded-[2.5rem] p-10">

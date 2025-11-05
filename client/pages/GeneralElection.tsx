@@ -20,7 +20,7 @@ const milestones = [
 const GeneralElection = () => {
   return (
     <SiteLayout>
-      <section className="relative px-6 py-12 sm:px-10">
+      <section className="relative px-6 py-0 mb-8 sm:px-10">
         <div className="mx-auto max-w-5xl space-y-14 text-white">
           <div className="space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
@@ -28,7 +28,7 @@ const GeneralElection = () => {
               Announcement
             </span>
             <h1 className="font-display text-4xl leading-tight sm:text-5xl">
-              General Election 2024–2025
+              General Election 2025–2026
             </h1>
             <p className="mx-auto max-w-3xl text-base text-white/80">
               HMPSTI Universitas Brawijaya invites every member to participate
@@ -97,7 +97,7 @@ const GeneralElection = () => {
               </div>
 
               <a
-                href="#"
+                href="https://form.typeform.com/to/K3hcaBKw"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/25"
               >
                 Join Us!
