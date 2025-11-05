@@ -5,6 +5,10 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // --- TAMBAHKAN BARIS INI ---
+  base: '/', 
+  // -------------------------
+
   server: {
     host: "::",
     port: 8080,
@@ -14,20 +18,19 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa",
+    // Pastikan ini disetel ke 'dist', bukan 'dist/spa'
+    outDir: "dist", 
   },
   plugins: [react(), expressPlugin()],
   
-  // --- GUNAKAN KONFIGURASI FINAL INI ---
-  // Format ini adalah yang paling eksplisit dan direkomendasikan untuk Vite
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './client'),
     },
   },
-  // --- AKHIR PERUBAHAN ---
 }));
 
+// ... sisa fungsi expressPlugin Anda
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
