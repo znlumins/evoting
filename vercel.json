@@ -1,27 +1,21 @@
 {
   "version": 2,
-
   "builds": [
     {
-      "comment": "1. Build Backend (Node.js) kita",
       "src": "dist/server/server.mjs",
       "use": "@vercel/node"
     },
     {
-      "comment": "2. Build Frontend (Static) kita",
       "src": "dist/index.html",
       "use": "@vercel/static"
     }
   ],
-
   "routes": [
     {
-      "comment": "3. Arahkan semua API ke Backend",
       "src": "/api/(.*)",
       "dest": "/dist/server/server.mjs"
     },
     {
-      "comment": "4. Arahkan semua request lain ke Frontend",
       "src": "/(.*)",
       "dest": "/dist/index.html"
     }
