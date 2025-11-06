@@ -30,7 +30,7 @@ const ManageUsersPage: React.FC = () => {
 
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/admin/users');
+                const response = await fetch('/api/admin/users');
                 if (!response.ok) throw new Error('Gagal mengambil data pengguna.');
                 const data: UserData[] = await response.json();
                 setUsers(data);
@@ -49,7 +49,7 @@ const ManageUsersPage: React.FC = () => {
         if (!window.confirm(`Anda yakin ingin mengubah role ${userToUpdate.nama_lengkap} menjadi ${newRole}?`)) return;
 
         try {
-            const response = await fetch(`http://localhost:3001/api/admin/users/${userToUpdate.id}`, {
+            const response = await fetch(`/api/admin/users/${userToUpdate.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ role: newRole }),
@@ -66,7 +66,7 @@ const ManageUsersPage: React.FC = () => {
         if (!window.confirm(`PERINGATAN: Anda akan menghapus ${userToDelete.nama_lengkap} secara permanen. Lanjutkan?`)) return;
         
         try {
-            const response = await fetch(`http://localhost:3001/api/admin/users/${userToDelete.id}`, {
+            const response = await fetch(`/api/admin/users/${userToDelete.id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) throw new Error('Gagal menghapus pengguna.');

@@ -37,7 +37,7 @@ const EvotingPage: React.FC = () => {
 
     const fetchCandidates = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/candidates');
+        const response = await fetch('/api/candidates');
         if (!response.ok) {
           throw new Error('Gagal memuat data kandidat dari server.');
         }
@@ -68,7 +68,7 @@ const EvotingPage: React.FC = () => {
     setIsVoting(true);
 
     try {
-        const response = await fetch('http://localhost:3001/api/vote', {
+        const response = await fetch('/api/vote', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: user.id, candidateId: candidate.id }),

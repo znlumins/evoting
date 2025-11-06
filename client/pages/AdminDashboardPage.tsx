@@ -38,7 +38,7 @@ const AdminDashboardPage: React.FC = () => {
 
         const fetchVoteResults = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/admin/stats');
+                const response = await fetch('/api/admin/stats');
                 if (!response.ok) {
                     if(isLoading) setError('Gagal memuat hasil pemilihan.');
                     return;

@@ -36,7 +36,7 @@ export const EditUserModal: React.FC<EditUserModalProps> = ({ user, isOpen, onCl
         setIsSaving(true);
         setError('');
         try {
-            const response = await fetch(`http://localhost:3001/api/admin/users/${user.id}`, {
+            const response = await fetch(`/api/admin/users/${user.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

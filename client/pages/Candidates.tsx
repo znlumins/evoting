@@ -38,7 +38,7 @@ const Candidates: React.FC = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/candidates');
+        const response = await fetch('/api/candidates');
         if (!response.ok) throw new Error('Gagal memuat data kandidat.');
         const data = await response.json();
         setCandidates(data);
