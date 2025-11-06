@@ -1,8 +1,15 @@
 {
-  "rewrites": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/spa/index.html" 
+      "comment": "1. Arahkan semua panggilan API ke server backend Anda",
+      "src": "/api/(.*)",
+      "dest": "/dist/server/node-build.mjs"
+    },
+    {
+      "comment": "2. Arahkan semua hal lain ke frontend (SPA) Anda",
+      "src": "/(.*)",
+      "dest": "/dist/index.html"
     }
   ]
 }
