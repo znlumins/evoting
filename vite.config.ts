@@ -1,14 +1,12 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { createServer } from "./server";
+// Pastikan path './server' ini benar menunjuk ke file server express Anda
+import { createServer } from "./server"; 
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // --- TAMBAHKAN BARIS INI ---
   base: '/', 
-  // -------------------------
-
   server: {
     host: "::",
     port: 8080,
@@ -18,25 +16,30 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Pastikan ini disetel ke 'dist', bukan 'dist/spa'
     outDir: "dist", 
   },
   plugins: [react(), expressPlugin()],
   
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './client'),
+      // Alias ini berarti '@/' akan menunjuk ke folder 'client/'
+      '@': path.resolve(__dirname, './client'), 
     },
   },
 }));
 
-// ... sisa fungsi expressPlugin Anda
+/**
+ * Plugin kustom untuk menjalankan server Express di dalam server Vite
+ * Ini adalah alasan mengapa Anda tidak memerlukan 'proxy'
+ */
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", 
+    apply: "serve", // Hanya berlaku saat 'npm run dev' (serve)
     configureServer(server) {
-      const app = createServer();
+      // Membuat server Express Anda
+      const app = createServer(); 
+      // Menggunakannya sebagai middleware di dalam Vite
       server.middlewares.use(app);
     },
   };
