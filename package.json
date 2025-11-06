@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "prisma": {
-    "schema": "prisma/schema.prisma"
+    "schema": "server/prisma/schema.prisma"
   },
   "pkg": {
     "assets": [
