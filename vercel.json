@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/dist/server/node-build.mjs"
+      "dest": "/dist/server/server.mjs"
     },
     {
       "src": "/(.*)",
